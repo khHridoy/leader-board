@@ -13,7 +13,7 @@ main {
   align-items: center;
 }
 .container {
-  width: 870px;
+  max-width: 870px;
   background-color: #ffffff;
   border-radius: 5px;
   padding: 30px;
@@ -144,4 +144,37 @@ hr {
   margin-left: 6px;
   font-size: 14px;
   color: #ff4a60;
+}
+
+/* media queries */
+
+/* for mobile  */
+@media only screen and (max-width: 688px) {
+  .container {
+    width: 100%;
+  }
+  .players,
+  .blogs,
+  .courses {
+    grid-template-columns: 1fr;
+  }
+  .player,
+  .blog,
+  .course {
+    flex-direction: column;
+  }
+}
+
+/* for tablet */
+@media only screen and (min-width: 688px) and (max-width: 992px) {
+  .container {
+    width: 100%;
+  }
+  .players,
+  .courses {
+    grid-template-columns: 1fr 1fr;
+  }
+  .blogs {
+    grid-template-columns: 1fr;
+  }
 }
